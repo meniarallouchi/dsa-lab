@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>  //needed for strcpy (strings)
 
-/*DEFINITION
+/*
+DEFINITION
    What is a Struct?
       Structures (also called structs) are a way to group several related variables into one place and under one name.
       Each variable in the structure is known as a member of the structure (or field).
@@ -15,10 +16,9 @@
       A student has a name, age, grade → use a struct
       A book has a title, author, price → use a struct
       You just need to store one number → no need, use a plain int
-*/
 
 
-/*MEMORY
+MEMORY
    When you declare a struct variable, C reserves one continuous block of memory big enough to hold all fields back to back.
    If s starts at address 100 and name is 50 bytes:
       name (50 bytes)  |  age (4 bytes)  |  grade (4 bytes)
@@ -27,10 +27,9 @@
    &s and &s.name point to the exact same address.
    The struct variable is just a label for the whole block.
    Each field has its own address inside that block.
-*/
 
 
-/* SYNTAX
+SYNTAX
    1. DEFINE the blueprint
       struct StructName {
          type field1;
@@ -85,7 +84,6 @@
          return 0;
       }
 */
-
 
 //exp
 
@@ -162,9 +160,8 @@ Array of structs:
 Memory:
    &s == &s.name  (struct starts where first field starts)
    fields are continuous in memory, each has its own address
-*/
 
-/*even quicker reference hehehee:)
+even quicker reference hehehee:)
    define       struct Student { char name[50]; int age; float grade; };
    create       struct Student s;
    assign       strcpy(s.name, "text");   s.age = 19;   s.grade = 15.5;
