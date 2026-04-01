@@ -9,9 +9,10 @@ Lab exercises from my Data Structures & Algorithms course (CS 141), written in C
 ## Structure
 ```
 dsa-lab/
-├── week1/
-├── week2/
-└── week3/
+├── lab1/
+├── lab2/
+├── lab3/
+├── lab4/
 └── ...
 ```
 
@@ -29,7 +30,7 @@ git clone https://github.com/meniarallouchi/dsa-lab
 ```
 2. Navigate to any exercise folder
 ```
-cd week1
+cd lab1
 ```
 3. Compile and run
 ```
@@ -39,8 +40,9 @@ gcc exercise1.c -o exercise1
 
 ## Topics Covered
 
-| Week | Topics |
+| Lab | Topics |
 |------|--------|
-| Week 1 | *Introduction to C Programming* |
-| Week 2 | *Control Structures and Arrays* |
-| Week 3 | *Pointers in C* |
+| Lab 1 | *Introduction to C Programming* |
+| Lab 2 | *Control Structures and Arrays* |
+| Lab 3 | *Pointers in C* |
+| Lab 4 | *Structs in C* |
