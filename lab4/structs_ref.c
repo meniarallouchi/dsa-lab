@@ -55,7 +55,7 @@ SYNTAX
          => You always pick one field at a time, nothing is automatic.
 
    5. SHORTCUT: initialize at declaration
-      struct Student s = {"Karim", 20, 15.5};
+      struct Student s = {"mia", 19, 15.5};
 
          => Fields fill in the same order they were defined.
 
@@ -83,6 +83,31 @@ SYNTAX
          printf("%d %c %s", s1.myNum, s1.myLetter, s1.myString);     => Print values
          return 0;
       }
+   
+   8. Reading Struct Data from User
+      instead of hardcoding values, you can let the user type them in.
+
+      fgets(variableName.field, size, stdin)    => for strings
+         => fgets reads a full line including spaces.
+         => strings don't need & because the array name is already an address.
+         => it adds a '\n' at the end, use the line below to remove it:
+               variableName.field[strcspn(variableName.field, "\n")] = 0;
+
+      scanf("%d", &variableName.field)         => for int/float/char...
+         => note the & before the variable (scanf needs the address).
+
+      exp:
+         struct Student s;
+
+         printf("enter name: ");
+         fgets(s.name, 50, stdin);
+         s.name[strcspn(s.name, "\n")]= 0;   => removes the newline fgets adds
+
+         printf("enter age: ");
+         scanf("%d", &s.age);
+
+         printf("enter grade: ");
+         scanf("%f", &s.grade);
 */
 
 //exp
@@ -130,6 +155,24 @@ int main() {
          students[i].age,
          students[i].grade);
    }
+
+   //reading struct data from user
+   struct Student s3;
+
+   printf("enter name: ");
+   fgets(s3.name, 50, stdin);
+   s3.name[strcspn(s3.name, "\n")]= 0;   //removes the newline fgets adds
+
+   printf("enter age: ");
+   scanf("%d", &s3.age);
+
+   printf("enter grade: ");
+   scanf("%f", &s3.grade);
+
+   printf("name: %s\n",s3.name);
+   printf("age: %d\n",s3.age);
+   printf("grade: %.2f\n",s3.grade);
+
    return 0;
 }
 
@@ -157,9 +200,16 @@ Array of structs:
    struct Student class[3];
    class[0].age = 19;
 
+Reading from user:
+   fgets(s.name, 50, stdin);                        => strings
+   s.name[strcspn(s.name, "\n")] = 0;               => remove newline after fgets
+   scanf("%d", &s.age);                             => int
+   scanf("%f", &s.grade);                           => float
+
 Memory:
    &s == &s.name  (struct starts where first field starts)
    fields are continuous in memory, each has its own address
+
 
 even quicker reference hehehee:)
    define       struct Student { char name[50]; int age; float grade; };
