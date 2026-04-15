@@ -13,6 +13,7 @@ dsa-lab/
 ├── lab2/
 ├── lab3/
 ├── lab4/
+├── lab5/
 └── ...
 ```
 
@@ -46,3 +47,4 @@ gcc exercise1.c -o exercise1
 | Lab 2 | *Control Structures and Arrays* |
 | Lab 3 | *Pointers in C* |
 | Lab 4 | *Structs in C* |
+| Lab 5 | *Singly Linked Lists in C* |
