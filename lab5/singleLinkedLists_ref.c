@@ -96,7 +96,7 @@ Representation of Singly Linked List in C
 */
 struct Node {    
         int data;  //data: indicates the value stored in the node.
-        Node* next;  //next: is a pointer that will store the address of the next node in the sequence.
+        struct Node *next;  //next: is a pointer that will store the address of the next node in the sequence.
 };
 
 /*
