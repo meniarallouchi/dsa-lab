@@ -18,7 +18,8 @@ void print_list(struct Node *head){
     printf("\n");
 }
 
-int main(){
+int main()
+{
     struct Node *head= NULL;
     print_list(head);
     return 0;
